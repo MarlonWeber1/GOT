@@ -5,7 +5,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitInicializador {
-    private val BASE_URL  = "https://thronesapi.com/swagger/index.html?urls.primaryName=Game%20of%20Thrones%20API%20v2"
+    private val BASE_URL  = "https://ThronesApi.com"
 
     val charactersService : GameOfThronesService
     val continentService : GameOfThronesService
