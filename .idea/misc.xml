@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Arquivos/Documents/GitHub/GOT/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14" />
+        <entry key="..\:/Arquivos/Documents/GitHub/GOT/app/src/main/res/drawable-v24/line.xml" value="0.14" />
+        <entry key="..\:/Arquivos/Documents/GitHub/GOT/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.14" />
+        <entry key="..\:/Arquivos/Documents/GitHub/GOT/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.14" />
+        <entry key="..\:/Arquivos/Documents/GitHub/GOT/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14" />
+        <entry key="..\:/Arquivos/Documents/GitHub/GOT/app/src/main/res/layout/activity_character_info.xml" value="0.2" />
+        <entry key="..\:/Arquivos/Documents/GitHub/GOT/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/NoteSamsung2/Documents/GOT/app/src/main/res/drawable/ic_game_of_thrones.xml" value="0.1" />
         <entry key="..\:/Users/NoteSamsung2/Documents/GOT/app/src/main/res/layout/activity_home.xml" value="0.13903985507246377" />
         <entry key="..\:/Users/NoteSamsung2/Documents/GOT/app/src/main/res/layout/activity_splash.xml" value="0.13903985507246377" />

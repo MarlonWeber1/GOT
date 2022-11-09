@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_blue"
+    tools:context=".view.detalhes.CharacterInfoActivity">
+
+    <TextView
+        android:id="@+id/nome_Completo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Daenerys Targaryen"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:background="@color/background_black">
+
+        <ImageView
+            android:id="@+id/character_detalhes_imagem"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            app:layout_collapseMode="parallax"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/texto_primeiro_nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Primeiro nome"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/character_detalhes_imagem" />
+
+        <TextView
+            android:id="@+id/info_primeiro_nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/texto_primeiro_nome"
+            app:layout_constraintTop_toTopOf="@id/texto_primeiro_nome"
+            tools:text="Primeiro nome" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="325dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.186"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info_primeiro_nome" />
+
+        <TextView
+            android:id="@+id/texto_sobrenome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Sobrenome"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line1"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/info_sobrenome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/texto_sobrenome"
+            app:layout_constraintTop_toTopOf="@id/texto_sobrenome"
+            tools:text="Sobrenome" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="325dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.186"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info_sobrenome" />
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Título"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+        <TextView
+            android:id="@+id/info_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/titulo"
+            app:layout_constraintTop_toTopOf="@+id/titulo"
+            tools:text="Título" />
+
+        <View
+            android:id="@+id/line3"
+            android:layout_width="325dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.186"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info_titulo" />
+
+        <TextView
+            android:id="@+id/familia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Familia"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line3" />
+
+        <TextView
+            android:id="@+id/info_familia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/familia"
+            app:layout_constraintTop_toTopOf="@+id/familia"
+            tools:text="Familia" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

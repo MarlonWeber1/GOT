@@ -8,4 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="cinza">#D3D3D3</color>
+    <color name="background_black">#111111</color>
+    <color name="background_blue">#123155</color>
 </resources>
