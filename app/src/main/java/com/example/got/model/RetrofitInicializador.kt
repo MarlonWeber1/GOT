@@ -5,21 +5,25 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitInicializador {
-    private val BASE_URL  = "https://ThronesApi.com"
+    private val BASE_URL = "https://ThronesApi.com"
 
-    val charactersService : GameOfThronesService
-    val continentService : GameOfThronesService
+    val charactersService: GameOfThronesService
+    val continentService: GameOfThronesService
 
     init {
         val retrofit: Retrofit =
-            Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create())
+            Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
                 .build()
         charactersService = retrofit.create(GameOfThronesService::class.java)
     }
 
     init {
         val retrofit: Retrofit =
-            Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create())
+            Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
                 .build()
         continentService = retrofit.create(GameOfThronesService::class.java)
     }

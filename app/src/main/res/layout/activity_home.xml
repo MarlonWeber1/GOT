@@ -4,6 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.HomeActivity">
+    tools:context=".view.HomeActivity"
+    android:background="@color/background_black">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/activity_lista_personagens_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:spanCount="3"
+        tools:itemCount="20"
+        tools:listitem="@layout/item_character"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
