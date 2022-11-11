@@ -8,8 +8,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.got.databinding.FragmentDashboardBinding
+import com.example.got.view.ui.home.HomeViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DashboardFragment : Fragment() {
+
+    private val viewModel by viewModel<HomeViewModel>()
 
     private var _binding: FragmentDashboardBinding? = null
 
@@ -33,6 +37,21 @@ class DashboardFragment : Fragment() {
             textView.text = it
         }
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.populaCharacters()
+
+        initObserver()
+    }
+
+    private fun initObserver() {
+        viewModel.characterResponse.observe(viewLifecycleOwner){
+            it?.let {
+
+            }
+        }
     }
 
     override fun onDestroyView() {

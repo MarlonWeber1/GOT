@@ -1,5 +1,6 @@
 package com.example.got.model.response
 
-class CharacterResponse {
+import com.example.got.model.Character
+import com.google.gson.annotations.SerializedName
 
-}
+class CharacterResponse: ArrayList<Character>()

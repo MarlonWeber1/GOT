@@ -8,9 +8,7 @@ import retrofit2.http.Path
 interface GameOfThronesService {
 
     @GET("/api/v2/Characters")
-    suspend fun buscaCharacters(
-        @Path("Characters") Characters: String
-    ): Response<CharacterResponse>
+    suspend fun buscaCharacters(): Response<CharacterResponse>
 
 
 }

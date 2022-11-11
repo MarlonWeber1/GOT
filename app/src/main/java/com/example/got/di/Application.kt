@@ -13,7 +13,9 @@ class Application : Application() {
             androidLogger()
             androidContext(this@Application)
             koin.loadModules(listOf(
-
+                dataModule,
+                numeryRepository,
+                viewModelModule
             ))
         }
     }
