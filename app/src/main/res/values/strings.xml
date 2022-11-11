@@ -6,5 +6,9 @@
     <string name="Sobrenome_Character_Info">Sobrenome</string>
     <string name="Titulo_Character_Info">Título</string>
     <string name="Familia_Character_Info">Família</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 
 </resources>
