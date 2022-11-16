@@ -18,6 +18,7 @@ import com.example.got.model.Character
 class ListaInfoAdapter(): RecyclerView.Adapter<ListaInfoAdapter.ViewHolder>() {
 
     private val listaCharacter: ArrayList<Character> = arrayListOf()
+    private var clickListener: ClickListener? = null
 
     inner class ViewHolder(
         private val binding : ItemCharacterBinding,
@@ -27,7 +28,7 @@ class ListaInfoAdapter(): RecyclerView.Adapter<ListaInfoAdapter.ViewHolder>() {
 
         fun vincula(character: Character){
             Glide.with(imageCharacter)
-                .load(character.image)
+                .load(character.imageUrl)
                 .placeholder(loadCircularProgress(imageCharacter.context))
                 .into(imageCharacter)
         }
@@ -68,6 +69,14 @@ class ListaInfoAdapter(): RecyclerView.Adapter<ListaInfoAdapter.ViewHolder>() {
         listaCharacter.addAll(listaMandaAdapter)
 
         notifyItemRangeInserted(oldRangeItem, newRangeItem)
+    }
+
+    fun setClickListener(clickListener: ClickListener) {
+        this.clickListener = clickListener
+    }
+
+    interface ClickListener {
+        fun onItemClick(character: Character, position: Int)
     }
 
 }

@@ -1,8 +1,11 @@
 package com.example.got.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 import java.io.Serializable
 
+@Parcelize
 data class Character (
     @SerializedName ("id") val idCharacter: String,
     @SerializedName ("firstName") val firstName: String,
@@ -12,4 +15,4 @@ data class Character (
     @SerializedName ("family") val family: String,
     @SerializedName ("image") val image: String,
     @SerializedName ("imageUrl") val imageUrl: String
-    ):Serializable
+    ):Parcelable
