@@ -14,7 +14,7 @@ import com.example.got.R
 import com.example.got.databinding.ItemCharacterBinding
 import com.example.got.model.Character
 
-class HomeAdapter() : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
+class CharactersAdapter() : RecyclerView.Adapter<CharactersAdapter.ViewHolder>() {
 
     private val listCharacter: ArrayList<Character> = arrayListOf()
     private var clickListener: ClickListener? = null

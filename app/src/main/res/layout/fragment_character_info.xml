@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_blue"
-    tools:context=".view.detalhes.CharacterInfoActivity">
+    tools:context=".view.detalhes.CharacterInfoFragment">
 
     <TextView
         android:id="@+id/complete_name"
@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
         android:text="Daenerys Targaryen"
+        app:flow_horizontalAlign="center"
         android:textColor="@color/white"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -176,6 +177,5 @@
             tools:text="Familia" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

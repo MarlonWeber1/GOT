@@ -3,7 +3,7 @@ package com.example.got.di
 import com.example.got.model.Retrofit
 import com.example.got.repository.Repository
 import com.example.got.repository.RepositoryIpl
-import com.example.got.view.ui.home.HomeViewModel
+import com.example.got.view.ui.characters.CharactersViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -20,6 +20,6 @@ val numeryRepository = module {
 }
 val viewModelModule = module{
     viewModel {
-        HomeViewModel(get())
+        CharactersViewModel(get())
     }
 }

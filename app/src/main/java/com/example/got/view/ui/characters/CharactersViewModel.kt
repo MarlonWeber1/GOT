@@ -1,4 +1,4 @@
-package com.example.got.view.ui.home
+package com.example.got.view.ui.characters
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -9,14 +9,14 @@ import com.example.got.model.response.NetworkResponse
 import com.example.got.repository.Repository
 import kotlinx.coroutines.launch
 
-class HomeViewModel(val repository: Repository) : ViewModel() {
+class CharactersViewModel(val repository: Repository) : ViewModel() {
 
     private val _characterResponse = MutableLiveData<CharacterResponse?>()
     val characterResponse: LiveData<CharacterResponse?> = _characterResponse
     private val _trataError = MutableLiveData<Unit>()
     val trataError: LiveData<Unit> = _trataError
 
-    fun populaCharacters() = viewModelScope.launch {
+    fun fillCharacters() = viewModelScope.launch {
         when(val response = repository.catchCharacters()){
             is NetworkResponse.Success -> {
                 _characterResponse.value = response.data
