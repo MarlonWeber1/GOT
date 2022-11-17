@@ -8,7 +8,7 @@
     tools:context=".view.detalhes.CharacterInfoActivity">
 
     <TextView
-        android:id="@+id/nome_Completo"
+        android:id="@+id/complete_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
@@ -26,7 +26,7 @@
         android:background="@color/background_black">
 
         <ImageView
-            android:id="@+id/character_detalhes_imagem"
+            android:id="@+id/character_details_image"
             android:layout_width="0dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
@@ -38,7 +38,7 @@
             tools:src="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/texto_primeiro_nome"
+            android:id="@+id/fisrt_name_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -48,10 +48,10 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/character_detalhes_imagem" />
+            app:layout_constraintTop_toBottomOf="@+id/character_details_image" />
 
         <TextView
-            android:id="@+id/info_primeiro_nome"
+            android:id="@+id/info_fisrt_name_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -59,8 +59,8 @@
             android:fontFamily="sans-serif"
             android:textColor="@color/white"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="@id/texto_primeiro_nome"
-            app:layout_constraintTop_toTopOf="@id/texto_primeiro_nome"
+            app:layout_constraintStart_toStartOf="@id/fisrt_name_text"
+            app:layout_constraintTop_toTopOf="@id/fisrt_name_text"
             tools:text="Primeiro nome" />
 
         <View
@@ -72,10 +72,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.186"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/info_primeiro_nome" />
+            app:layout_constraintTop_toBottomOf="@+id/info_fisrt_name_text" />
 
         <TextView
-            android:id="@+id/texto_sobrenome"
+            android:id="@+id/text_second_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -89,7 +89,7 @@
             tools:ignore="MissingConstraints" />
 
         <TextView
-            android:id="@+id/info_sobrenome"
+            android:id="@+id/info_text_second_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -97,8 +97,8 @@
             android:fontFamily="sans-serif"
             android:textColor="@color/white"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="@id/texto_sobrenome"
-            app:layout_constraintTop_toTopOf="@id/texto_sobrenome"
+            app:layout_constraintStart_toStartOf="@id/text_second_name"
+            app:layout_constraintTop_toTopOf="@id/text_second_name"
             tools:text="Sobrenome" />
 
         <View
@@ -110,10 +110,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.186"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/info_sobrenome" />
+            app:layout_constraintTop_toBottomOf="@+id/info_text_second_name" />
 
         <TextView
-            android:id="@+id/titulo"
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -126,7 +126,7 @@
             app:layout_constraintTop_toBottomOf="@+id/line2" />
 
         <TextView
-            android:id="@+id/info_titulo"
+            android:id="@+id/info_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -134,8 +134,8 @@
             android:fontFamily="sans-serif"
             android:textColor="@color/white"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="@id/titulo"
-            app:layout_constraintTop_toTopOf="@+id/titulo"
+            app:layout_constraintStart_toStartOf="@id/title"
+            app:layout_constraintTop_toTopOf="@+id/title"
             tools:text="Título" />
 
         <View
@@ -147,10 +147,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.186"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/info_titulo" />
+            app:layout_constraintTop_toBottomOf="@+id/info_title" />
 
         <TextView
-            android:id="@+id/familia"
+            android:id="@+id/family"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -163,7 +163,7 @@
             app:layout_constraintTop_toBottomOf="@+id/line3" />
 
         <TextView
-            android:id="@+id/info_familia"
+            android:id="@+id/info_family"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -171,8 +171,8 @@
             android:fontFamily="sans-serif"
             android:textColor="@color/white"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="@id/familia"
-            app:layout_constraintTop_toTopOf="@+id/familia"
+            app:layout_constraintStart_toStartOf="@id/family"
+            app:layout_constraintTop_toTopOf="@+id/family"
             tools:text="Familia" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

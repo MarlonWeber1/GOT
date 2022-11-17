@@ -12,9 +12,9 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        val imagem = findViewById<ImageView>(R.id.iv_splash)
-        imagem.alpha = 0f
-        imagem.animate().setDuration(2500).alpha(1f).withEndAction {
+        val image = findViewById<ImageView>(R.id.iv_splash)
+        image.alpha = 0f
+        image.animate().setDuration(2500).alpha(1f).withEndAction {
             val it = Intent(this, HomeActivity::class.java)
             startActivity(it)
             overridePendingTransition(

@@ -2,7 +2,6 @@ package com.example.got.view.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.core.content.ContextCompat
@@ -15,18 +14,18 @@ import com.example.got.R
 import com.example.got.databinding.ItemCharacterBinding
 import com.example.got.model.Character
 
-class ListaInfoAdapter(): RecyclerView.Adapter<ListaInfoAdapter.ViewHolder>() {
+class HomeAdapter() : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
 
-    private val listaCharacter: ArrayList<Character> = arrayListOf()
+    private val listCharacter: ArrayList<Character> = arrayListOf()
     private var clickListener: ClickListener? = null
 
     inner class ViewHolder(
-        private val binding : ItemCharacterBinding,
-    ):RecyclerView.ViewHolder(binding.root){
+        private val binding: ItemCharacterBinding,
+    ) : RecyclerView.ViewHolder(binding.root) {
 
-        val imageCharacter = itemView.findViewById<ImageView>(R.id.item_character_imagem)
+        val imageCharacter = itemView.findViewById<ImageView>(R.id.item_character_image)
 
-        fun vincula(character: Character){
+        fun bind(character: Character) {
             Glide.with(imageCharacter)
                 .load(character.imageUrl)
                 .placeholder(loadCircularProgress(imageCharacter.context))
@@ -35,15 +34,21 @@ class ListaInfoAdapter(): RecyclerView.Adapter<ListaInfoAdapter.ViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(ItemCharacterBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        return ViewHolder(
+            ItemCharacterBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.vincula(listaCharacter[position])
+        holder.bind(listCharacter[position])
     }
 
     override fun getItemCount(): Int {
-        return listaCharacter.size
+        return listCharacter.size
     }
 
     private fun loadCircularProgress(context: Context): CircularProgressDrawable {
@@ -61,12 +66,12 @@ class ListaInfoAdapter(): RecyclerView.Adapter<ListaInfoAdapter.ViewHolder>() {
         return circularProgressDrawable
     }
 
-    fun mandaProAdapter(listaMandaAdapter: List<Character>){
-        val oldRangeItem = listaCharacter.size
+    fun sendsToAdapter(listaMandaAdapter: List<Character>) {
+        val oldRangeItem = listCharacter.size
         val newRangeItem = listaMandaAdapter.size
 
-        listaCharacter.clear()
-        listaCharacter.addAll(listaMandaAdapter)
+        listCharacter.clear()
+        listCharacter.addAll(listaMandaAdapter)
 
         notifyItemRangeInserted(oldRangeItem, newRangeItem)
     }

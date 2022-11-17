@@ -23,7 +23,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/item_character_imagem"
+                android:id="@+id/item_character_image"
                 android:layout_width="0dp"
                 android:layout_height="260dp"
                 android:scaleType="centerCrop"
