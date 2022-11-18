@@ -16,7 +16,7 @@ class CharactersFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val viewModel by viewModel<CharactersViewModel>()
-    private lateinit var infoAdapter: CharactersAdapter
+    private lateinit var infoAdapterCharacter: CharactersAdapter
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -40,7 +40,7 @@ class CharactersFragment : Fragment() {
         viewModel.fillCharacters()
         observer()
 
-        infoAdapter = CharactersAdapter()
+        infoAdapterCharacter = CharactersAdapter()
     }
 
     private fun observer() {
@@ -53,9 +53,9 @@ class CharactersFragment : Fragment() {
 
     private fun setAdapter(response: CharacterResponse) {
         binding.activityListCharactersRecyclerview.apply {
-            adapter = infoAdapter
-            infoAdapter.sendsToAdapter(response)
-            infoAdapter.setClickListener(object : CharactersAdapter.ClickListener{
+            adapter = infoAdapterCharacter
+            infoAdapterCharacter.sendsToAdapter(response)
+            infoAdapterCharacter.setClickListener(object : CharactersAdapter.ClickListener{
                 override fun onItemClick(character: Character, position: Int) {
                     val bundle = bundleOf("characters" to response)
 //                    findNavController().navigate()

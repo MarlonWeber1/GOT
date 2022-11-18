@@ -66,12 +66,12 @@ class CharactersAdapter() : RecyclerView.Adapter<CharactersAdapter.ViewHolder>()
         return circularProgressDrawable
     }
 
-    fun sendsToAdapter(listaMandaAdapter: List<Character>) {
+    fun sendsToAdapter(listSendsToAdapter: List<Character>) {
         val oldRangeItem = listCharacter.size
-        val newRangeItem = listaMandaAdapter.size
+        val newRangeItem = listSendsToAdapter.size
 
         listCharacter.clear()
-        listCharacter.addAll(listaMandaAdapter)
+        listCharacter.addAll(listSendsToAdapter)
 
         notifyItemRangeInserted(oldRangeItem, newRangeItem)
     }

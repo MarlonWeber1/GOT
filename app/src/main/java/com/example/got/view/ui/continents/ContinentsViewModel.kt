@@ -1,4 +1,4 @@
-package com.example.got.view.ui.dashboard
+package com.example.got.view.ui.continents
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.got.view.ui.dashboard.ContinentsFragment"
+        android:name="com.example.got.view.ui.continents.ContinentsFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
