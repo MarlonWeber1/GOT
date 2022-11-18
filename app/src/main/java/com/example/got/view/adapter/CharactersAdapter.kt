@@ -17,13 +17,21 @@ import com.example.got.model.Character
 class CharactersAdapter() : RecyclerView.Adapter<CharactersAdapter.ViewHolder>() {
 
     private val listCharacter: ArrayList<Character> = arrayListOf()
-    private var clickListener: ClickListener? = null
+    private lateinit var clickListener: ClickListener
 
     inner class ViewHolder(
         private val binding: ItemCharacterBinding,
+        listener: ClickListener
     ) : RecyclerView.ViewHolder(binding.root) {
 
         val imageCharacter = itemView.findViewById<ImageView>(R.id.item_character_image)
+        init{
+            itemView.let {
+                it.setOnClickListener{
+                    listener.onItemClick(listCharacter[bindingAdapterPosition], bindingAdapterPosition)
+                }
+            }
+        }
 
         fun bind(character: Character) {
             Glide.with(imageCharacter)
@@ -39,7 +47,7 @@ class CharactersAdapter() : RecyclerView.Adapter<CharactersAdapter.ViewHolder>()
                 LayoutInflater.from(parent.context),
                 parent,
                 false
-            )
+            ), clickListener
         )
     }
 

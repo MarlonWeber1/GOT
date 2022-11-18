@@ -36,16 +36,16 @@ class ContinentsFragment : Fragment() {
         return root
     }
 
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//
-//        viewModel.fillContinents()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        viewModel.fillContinents()
 //        observer()
-//
-//        infoAdapterContinent = ContinentAdapter()
-//    }
-//
-//    private fun initObserver() {
+
+        infoAdapterContinent = ContinentAdapter()
+    }
+
+//    private fun observer() {
 //        viewModel.continentsResponse.observe(viewLifecycleOwner) {
 //            it?.let {
 //                setAdapter(it)
@@ -54,10 +54,10 @@ class ContinentsFragment : Fragment() {
 //    }
 //
 //    private fun setAdapter(response: ContinentResponse) {
-//        binding.apply {
+//        binding.activityListContinentsRecyclerview.apply {
 //            adapter = infoAdapterContinent
-//            infoAdapterCharacter.sendsToAdapter(response)
-//            infoAdapterCharacter.setClickListener(object : CharactersAdapter.ClickListener{
+//            infoAdapterContinent.sendsToAdapter(response)
+//            infoAdapterContinent.setClickListener(object : ContinentAdapter.ClickListener{
 //                override fun onItemClick(character: Character, position: Int) {
 //                    val bundle = bundleOf("characters" to response)
 ////                    findNavController().navigate()

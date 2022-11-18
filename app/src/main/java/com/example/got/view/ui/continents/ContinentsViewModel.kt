@@ -19,7 +19,7 @@ class ContinentsViewModel(val repository: Repository) : ViewModel() {
     fun fillContinents() = viewModelScope.launch {
         when(val response = repository.catchContinents()){
             is NetworkResponse.Success -> {
-                _continentsResponse.value = response.data
+                //_continentsResponse.value = response.data
             }
             is NetworkResponse.Failed -> {
                 _trataError.value = Unit

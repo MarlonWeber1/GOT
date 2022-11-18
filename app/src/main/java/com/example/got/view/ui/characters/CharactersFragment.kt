@@ -1,5 +1,6 @@
 package com.example.got.view.ui.characters
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import com.example.got.databinding.FragmentHomeBinding
 import com.example.got.model.Character
 import com.example.got.model.response.CharacterResponse
 import com.example.got.view.adapter.CharactersAdapter
+import com.example.got.view.detalhes.CharacterInfoActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CharactersFragment : Fragment() {
@@ -57,8 +59,9 @@ class CharactersFragment : Fragment() {
             infoAdapterCharacter.sendsToAdapter(response)
             infoAdapterCharacter.setClickListener(object : CharactersAdapter.ClickListener{
                 override fun onItemClick(character: Character, position: Int) {
-                    val bundle = bundleOf("characters" to response)
-//                    findNavController().navigate()
+                    val intent = Intent(requireActivity(), CharacterInfoActivity::class.java)
+                    intent.putExtra("sendCharacter", character)
+                    startActivity(intent)
                 }
             })
         }
