@@ -22,6 +22,8 @@ val numeryRepository = module {
 val viewModelModule = module{
     viewModel {
         CharactersViewModel(get())
+    }
+    viewModel{
         ContinentsViewModel(get())
     }
 }

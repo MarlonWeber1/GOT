@@ -7,10 +7,13 @@
     <string name="Titulo_Character_Info">Título</string>
     <string name="Familia_Character_Info">Família</string>
     <string name="title_activity_home">HomeActivity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+
+    <!-- Strings Bottom Nav Menu -->
+    <string name="title_character">Characters</string>
+    <string name="title_continent">Continents</string>
     <string name="title_notifications">Notifications</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

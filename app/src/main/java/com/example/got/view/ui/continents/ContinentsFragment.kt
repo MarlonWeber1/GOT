@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.got.databinding.FragmentDashboardBinding
+import com.example.got.databinding.FragmentContinentBinding
 import com.example.got.model.response.ContinentResponse
 import com.example.got.view.adapter.ContinentAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -14,7 +14,7 @@ class ContinentsFragment : Fragment() {
 
     private val viewModel by viewModel<ContinentsViewModel>()
     private lateinit var infoAdapterContinent: ContinentAdapter
-    private var _binding: FragmentDashboardBinding? = null
+    private var _binding: FragmentContinentBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -26,7 +26,7 @@ class ContinentsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        _binding = FragmentContinentBinding.inflate(inflater, container, false)
 
         return binding.root
     }

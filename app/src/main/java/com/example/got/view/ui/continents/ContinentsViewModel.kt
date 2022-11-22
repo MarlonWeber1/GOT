@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.got.model.response.CharacterResponse
 import com.example.got.model.response.ContinentResponse
 import com.example.got.model.response.NetworkResponse
 import com.example.got.repository.Repository

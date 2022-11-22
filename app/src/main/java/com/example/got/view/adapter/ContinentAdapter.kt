@@ -9,20 +9,20 @@ import com.example.got.model.Continent
 class ContinentAdapter() : RecyclerView.Adapter<ContinentAdapter.ViewHolder>() {
 
     private val listContinents: ArrayList<Continent> = arrayListOf()
-    private lateinit var clickListener: ClickListener
+//    private lateinit var clickListener: ClickListener
 
     inner class ViewHolder(
         private val binding: ItemContinentBinding,
-        listener: ClickListener
+//        listener: ClickListener
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        init{
-            itemView.let {
-                it.setOnClickListener{
-                    listener.onItemClick(listContinents[bindingAdapterPosition], bindingAdapterPosition)
-                }
-            }
-        }
+//        init{
+//            itemView.let {
+//                it.setOnClickListener{
+//                    listener.onItemClick(listContinents[bindingAdapterPosition], bindingAdapterPosition)
+//                }
+//            }
+//        }
 
         fun bind(continent: Continent) {
             binding.itemContinentText.text = continent.name
@@ -35,7 +35,7 @@ class ContinentAdapter() : RecyclerView.Adapter<ContinentAdapter.ViewHolder>() {
                 LayoutInflater.from(parent.context),
                 parent,
                 false
-            ) , clickListener
+          ) //, clickListener
         )
     }
 
@@ -57,12 +57,12 @@ class ContinentAdapter() : RecyclerView.Adapter<ContinentAdapter.ViewHolder>() {
         notifyItemRangeInserted(oldRangeItem, newRangeItem)
     }
 
-    fun setClickListener(clickListener: ClickListener) {
-        this.clickListener = clickListener
-    }
-
-    interface ClickListener {
-        fun onItemClick(character: Continent, position: Int)
-    }
+//    fun setClickListener(clickListener: ClickListener) {
+//        this.clickListener = clickListener
+//    }
+//
+//    interface ClickListener {
+//        fun onItemClick(character: Continent, position: Int)
+//    }
 
 }

@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.got.databinding.FragmentHomeBinding
+import com.example.got.databinding.FragmentCharacterBinding
 import com.example.got.model.Character
 import com.example.got.model.response.CharacterResponse
 import com.example.got.view.adapter.CharactersAdapter
@@ -15,7 +15,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CharactersFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentCharacterBinding? = null
     private val viewModel by viewModel<CharactersViewModel>()
     private lateinit var infoAdapterCharacter: CharactersAdapter
 
@@ -29,7 +29,7 @@ class CharactersFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding =FragmentCharacterBinding.inflate(inflater, container, false)
         return binding.root
     }
 

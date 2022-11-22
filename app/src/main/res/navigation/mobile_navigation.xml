@@ -8,14 +8,14 @@
     <fragment
         android:id="@+id/navigation_character"
         android:name="com.example.got.view.ui.characters.CharactersFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:label="@string/title_character"
+        tools:layout="@layout/fragment_character" />
 
     <fragment
         android:id="@+id/navigation_continent"
         android:name="com.example.got.view.ui.continents.ContinentsFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:label="@string/title_continent"
+        tools:layout="@layout/fragment_continent" />
 
     <fragment
         android:id="@+id/navigation_notifications"
