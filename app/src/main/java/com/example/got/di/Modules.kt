@@ -4,6 +4,7 @@ import com.example.got.model.Retrofit
 import com.example.got.repository.Repository
 import com.example.got.repository.RepositoryIpl
 import com.example.got.view.ui.characters.CharactersViewModel
+import com.example.got.view.ui.continents.ContinentsViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -21,5 +22,6 @@ val numeryRepository = module {
 val viewModelModule = module{
     viewModel {
         CharactersViewModel(get())
+        ContinentsViewModel(get())
     }
 }

@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import com.example.got.databinding.FragmentHomeBinding
 import com.example.got.model.Character
@@ -31,9 +30,7 @@ class CharactersFragment : Fragment() {
     ): View {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        return root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -57,7 +54,7 @@ class CharactersFragment : Fragment() {
         binding.activityListCharactersRecyclerview.apply {
             adapter = infoAdapterCharacter
             infoAdapterCharacter.sendsToAdapter(response)
-            infoAdapterCharacter.setClickListener(object : CharactersAdapter.ClickListener{
+            infoAdapterCharacter.setClickListener(object : CharactersAdapter.ClickListener {
                 override fun onItemClick(character: Character, position: Int) {
                     val intent = Intent(requireActivity(), CharacterInfoActivity::class.java)
                     intent.putExtra("sendCharacter", character)

@@ -4,13 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import com.example.got.databinding.FragmentDashboardBinding
-import com.example.got.model.Character
-import com.example.got.model.response.CharacterResponse
 import com.example.got.model.response.ContinentResponse
-import com.example.got.view.adapter.CharactersAdapter
 import com.example.got.view.adapter.ContinentAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -31,40 +27,34 @@ class ContinentsFragment : Fragment() {
     ): View {
 
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
-        return root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.fillContinents()
-//        observer()
+        observer()
 
         infoAdapterContinent = ContinentAdapter()
     }
 
-//    private fun observer() {
-//        viewModel.continentsResponse.observe(viewLifecycleOwner) {
-//            it?.let {
-//                setAdapter(it)
-//            }
-//        }
-//    }
-//
-//    private fun setAdapter(response: ContinentResponse) {
-//        binding.activityListContinentsRecyclerview.apply {
-//            adapter = infoAdapterContinent
-//            infoAdapterContinent.sendsToAdapter(response)
-//            infoAdapterContinent.setClickListener(object : ContinentAdapter.ClickListener{
-//                override fun onItemClick(character: Character, position: Int) {
-//                    val bundle = bundleOf("characters" to response)
-////                    findNavController().navigate()
-//                }
-//            })
-//        }
-//    }
+    private fun observer() {
+        viewModel.continentsResponse.observe(viewLifecycleOwner) {
+            it?.let {
+                setAdapter(it)
+            }
+        }
+    }
+
+    private fun setAdapter(response: ContinentResponse) {
+        binding.activityListContinentsRecyclerview.apply {
+            adapter = infoAdapterContinent
+            infoAdapterContinent.sendsToAdapter(response)
+
+        }
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()

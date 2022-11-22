@@ -19,7 +19,7 @@ class CharacterInfoActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val result = intent.getParcelableExtra<Character>("sendCharacter")
-        
+
         binding.characterDetailsImage.loadImage(result?.imageUrl)
 
         binding.completeName.text = result?.fullName

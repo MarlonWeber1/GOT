@@ -4,17 +4,26 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.got.databinding.ItemContinentBinding
-import com.example.got.model.Character
 import com.example.got.model.Continent
 
 class ContinentAdapter() : RecyclerView.Adapter<ContinentAdapter.ViewHolder>() {
 
     private val listContinents: ArrayList<Continent> = arrayListOf()
-    private var clickListener: ContinentAdapter.ClickListener? = null
+    private lateinit var clickListener: ClickListener
 
     inner class ViewHolder(
-        private val binding: ItemContinentBinding
+        private val binding: ItemContinentBinding,
+        listener: ClickListener
     ) : RecyclerView.ViewHolder(binding.root) {
+
+        init{
+            itemView.let {
+                it.setOnClickListener{
+                    listener.onItemClick(listContinents[bindingAdapterPosition], bindingAdapterPosition)
+                }
+            }
+        }
+
         fun bind(continent: Continent) {
             binding.itemContinentText.text = continent.name
         }
@@ -26,7 +35,7 @@ class ContinentAdapter() : RecyclerView.Adapter<ContinentAdapter.ViewHolder>() {
                 LayoutInflater.from(parent.context),
                 parent,
                 false
-            )
+            ) , clickListener
         )
     }
 
@@ -38,12 +47,12 @@ class ContinentAdapter() : RecyclerView.Adapter<ContinentAdapter.ViewHolder>() {
         return listContinents.size
     }
 
-    fun sendsToAdapter(listSendsToAdapter: List<Character>) {
+    fun sendsToAdapter(listSendsToAdapter: List<Continent>) {
         val oldRangeItem = listContinents.size
         val newRangeItem = listSendsToAdapter.size
 
         listContinents.clear()
-//        listContinents.addAll(listSendsToAdapter)
+        listContinents.addAll(listSendsToAdapter)
 
         notifyItemRangeInserted(oldRangeItem, newRangeItem)
     }
@@ -53,7 +62,7 @@ class ContinentAdapter() : RecyclerView.Adapter<ContinentAdapter.ViewHolder>() {
     }
 
     interface ClickListener {
-        fun onItemClick(character: Character, position: Int)
+        fun onItemClick(character: Continent, position: Int)
     }
 
 }
