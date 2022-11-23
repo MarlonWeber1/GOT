@@ -2,10 +2,13 @@
     <string name="app_name">GOT</string>
 
     <!-- Strings Character Info -->
-    <string name="Primeiro_Nome_Character_Info">Primeiro nome</string>
-    <string name="Sobrenome_Character_Info">Sobrenome</string>
-    <string name="Titulo_Character_Info">Título</string>
-    <string name="Familia_Character_Info">Família</string>
+    <string name="Primeiro_Nome_Character_Info">First Name</string>
+    <string name="Sobrenome_Character_Info">Last Name</string>
+    <string name="Titulo_Character_Info">Title</string>
+    <string name="Familia_Character_Info">Family</string>
+    <string name="Edit_Character_Info">Edit</string>
+
+
     <string name="title_activity_home">HomeActivity</string>
 
     <!-- Strings Bottom Nav Menu -->
