@@ -7,6 +7,7 @@
     <string name="Titulo_Character_Info">Title</string>
     <string name="Familia_Character_Info">Family</string>
     <string name="Edit_Character_Info">Edit</string>
+    <string name="Change_Information">Change Information</string>
 
 
     <string name="title_activity_home">HomeActivity</string>
