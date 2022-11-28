@@ -17,9 +17,4 @@
         android:label="@string/title_continent"
         tools:layout="@layout/fragment_continent" />
 
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.got.view.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
 </navigation>

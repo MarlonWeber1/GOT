@@ -184,7 +184,7 @@
             android:id="@+id/button_info_activity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/background_blue"
+            android:background="@color/light_black"
             android:text="@string/Edit_Character_Info"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
