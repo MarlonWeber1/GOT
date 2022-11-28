@@ -38,6 +38,7 @@ class CharactersAdapter() : RecyclerView.Adapter<CharactersAdapter.ViewHolder>()
                 .load(character.imageUrl)
                 .placeholder(loadCircularProgress(imageCharacter.context))
                 .into(imageCharacter)
+            binding.itemCharacterText.text = character.fullName
         }
     }
 
